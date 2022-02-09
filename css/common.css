@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* header */
+header{
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 80px; 
+    line-height: 85px; letter-spacing: 3px;
+    background: #060029; box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+    z-index:9;
+    transition: all 0.3s ease-in;
+}
+.logo{
+    float: left; padding: 0 30px;
+    font-family: 'harrypotter'; font-size: 25px;
+}
+.logo strong{    
+    margin-right: 5px; padding: 5px 4px 0 6px; line-height: 33px;
+    color: #080031; background-color: #FFF;
+}
+.logo:hover strong{background: #dcff00;}
+.logo:hover span{color: #dcff00;}
+.hd-menu{float: right;}
+.hd-menu a{
+    position: relative; padding-right: 70px;
+    line-height: 60px;
+    font-size: 25px;
+}
+.hd-menu a::before{
+    content: " ";
+    position: absolute; right: 30px; top: 5px;
+    width: 25px; height: 100%;
+    background: url(../imgs/menu-btn.png) no-repeat center;
+}
+.nav-down{top: -80px;}
+
+/* menu */
+#menu{
+    display: none;
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    text-align: center;
+    background: rgba(6, 0, 41, 0.9); overflow: hidden;
+    z-index: 999;    
+}
+
+.close{position: absolute; right: 40px; top: 10px; padding: 10px;}
+
+#menu .menu-wrap{
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.main-menu > li{
+    padding: 20px 40px;
+    border-top: 1px solid rgba(212, 212, 255, 0.1);
+    font-size: 23px; letter-spacing: 5px;
+}
+.main-menu > li:nth-child(1){border-top: 0;}
+.main-menu > li:hover a{color: #dcff00;}
+
+.mov-menu > li{
+    margin-top: 30px; padding: 20px 90px;
+    font-size: 25px; font-weight: 400;
+    border: 2px solid #FFF;
+}
+.move{background: #FFF;}
+.move a{color: #080031; font-weight: 400;}
+
+.blur-in{filter: blur(5px);}
+
+/* banner */
+.banner{
+    position: relative; width: 100%; height: 800px;
+    pointer-events: none;
+}
+.banner::after{
+    content: " "; display: block;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    background: #080031; opacity: 0.6;
+}
+.banner > .bn-text{
+    position: relative;
+    width: 1400px; margin: 0 auto; padding: 0;
+    z-index: 1;
+}
+.bn-title{padding-top: 410px;}
+.bn-title > h1{font-size: 90px;}
+.bn-title > h1::after{
+    content: " ";
+    display: block;
+    width: 100%; max-width: 100%; height: 2px; margin-top: 30px;
+    background: #FFF;
+}
+.bn-content{
+    display: flex;
+    margin-top: 30px; letter-spacing: 3px; font-size: 22px;
+    align-items: center;
+}
+.action-btn{
+    margin-left: 100px; padding: 10px 30px;
+    border: 2px solid #FFF;
+    pointer-events: auto;
+}
+.action-btn:hover{border: 2px solid #dcff00;}
+.action-btn:hover li a{color: #dcff00;}
+
+
+/* footer */
+footer{
+    width: 100%; height: 350px; padding: 0 200px;
+    background: #060029; box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+}
+.footer-wrap{
+    position: relative; left: 50%; top: 50%;
+    width: 1400px;
+    transform: translate(-50%, -50%);
+}
+
+footer li{float: left;}
+.sns li{margin: 0 20px;}
+.sns > li:nth-child(1){margin-left: 0;}
+.sns li:nth-child(1) a{padding-left: 0;}
+.sns > li a{padding: 15px 20px; font-size: 40px;}
+.sns li:hover a, .copyright li:hover a{color: #dcff00;}
+
+.copyright{margin-top: 30px; cursor: default;}
+.copyright li{
+    margin-left: 40px;
+    font-size: 20px;
+    letter-spacing: 3px; text-transform: uppercase;
+}
+.copyright li:nth-child(1){margin-left: 0;}
+.copyright li:nth-child(2n){color: rgb(255,255,255,0.2);}
+
+@media screen and (min-width: 1440px) and (max-width: 1799px){ /* FHD */
+    /* header */
+    header{height: 60px; line-height: 60px;}
+    .logo{padding: 0 25px; font-size: 20px;}
+    .hd-menu a{font-size: 20px; padding-right: 55px; vertical-align: middle;}
+    .hd-menu a::before{right: 25px; top: 0; width: 25px;}
+    .nav-down{top: -60px;}
+
+    /* menu */
+    .mov-menu > li{padding: 15px 90px; font-size: 20px;}
+
+    /* banner */
+    .banner{height: 600px;}
+    .banner > .bn-text{width: 1200px;}
+    .bn-title{padding-top: 250px;}
+    .bn-title > h1{font-size: 70px;}
+    .bn-title > h1::after{margin-top: 30px;}
+    .bn-content{font-size: 18px;}
+    .action-btn{margin-left: 80px;}
+
+    /* footer */
+    footer{height: 250px;}
+    .footer-wrap{width: 1200px; margin: 0 auto;}
+    .sns > li a{font-size: 35px;}
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px){ /* HD */
+    .FHD{display: none;}
+    /* header */
+    header{height: 40px; line-height: 40px;}
+    .logo{padding: 0 20px; font-size: 15px;}
+    .logo strong{line-height: 45px;}
+    .hd-menu a{top: -13px; padding-right: 55px; font-size: 15px;}
+    .hd-menu a::before{right: 25px; top: 2px;}
+    .nav-down{top: -40px;}
+
+    /* menu */
+    .close > a > img{width: 25px;}
+    .main-menu > li{padding: 15px 25px; font-size: 18px;}
+    .mov-menu > li{padding: 12px 70px; font-size: 16px;}
+
+    /* banner */
+    .banner{height: 470px;}
+    .banner > .bn-text{width: 800px;}
+    .bn-title{padding-top: 240px;}
+    .bn-title > h1{font-size: 50px;}
+    .bn-title > h1::after{margin-top: 10px;}
+    .bn-content{margin-top: 10px; font-size: 15px;}
+
+    /* footer */
+    footer{height: 200px;}
+    .footer-wrap{width: 800px;}
+    .sns li{margin: 0 10px;}
+    .sns > li a{font-size: 25px;}
+    .copyright li{margin-left: 30px; font-size: 15px;}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){ /* tablet */
+    
+}
+/* 중단점 네개로 할지 다섯개로 할지 태블릿도 두개 폰도 두개 할지 고민.... */

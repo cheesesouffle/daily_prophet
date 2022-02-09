@@ -1,0 +1,85 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'harrypotter';
+    src: url(../font/harrypotter.eot);
+    src: url(../font/harrypotter.woff) format('woff');
+}
+@font-face{ /* body */
+    font-family: 'BeVietnam';
+    src: url(../font/BeVietnam.eot);
+    src: url(../font/BeVietnam.woff) format('woff');
+}
+@font-face{ /* hN */
+    font-family: 'Rajdhani';
+    src: url(../font/Rajdhani.eot);
+    src: url(../font/Rajdhani.woff) format('woff');
+}
+@font-face{
+    font-family: 'Calligraffitti';
+    src: url(../font/Calligraffitti.eot);
+    src: url(../font/Calligraffitti.woff) format('woff');
+}
+@font-face{
+    font-family: 'Chonburi';
+    src: url(../font/Chonburi.eot);
+    src: url(../font/Chonburi.woff) format('woff');
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html{scroll-behavior:smooth;}
+ul li{list-style: none;}
+a{text-decoration: none; color: #FFF;}
+body{    
+    font-family: 'BeVietnam'; font-size: 20px; font-weight: 300;
+    color: #000; background: #080031; letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6{font-family: 'Rajdhani';}
+.clear{clear: both;}
+
+@keyframes index-slide {
+    from {transform: rotate(0deg);}
+    from {transform: rotate(360deg);}
+}
+@keyframes bounce-top {
+    0%{transform: scale(0); animation-timing-function: ease-in; opacity: 0;}
+    38%{transform: scale(1); animation-timing-function: ease-out; opacity: 1;}
+    55%{transform: scale(0.7); animation-timing-function: ease-in;}
+    72%{transform: scale(1); animation-timing-function: ease-out;}
+    81%{transform: scale(0.84); animation-timing-function: ease-in;}
+    89%{transform: scale(1); animation-timing-function: ease-out;}
+    95%{transform: scale(0.95); animation-timing-function: ease-in;}
+    100%{transform: scale(1); animation-timing-function: ease-out;}
+}
+@keyframes index-slide2 {
+    from {transform: scale(2);}
+    to {transform: scale(1);}
+}
+@keyframes pick{
+    0%{transform: translateX(0);}
+    20%{transform: translateX(-20px);}
+    100%{transform: translateX(40px);}
+}
+@keyframes card-text{
+    from{transform: translateX(0%);}
+    to, 99%{transform: translateX(-100%);}
+}
+@keyframes two-left-body{
+    from{transform: translateY(0); opacity: 1;}
+    to{transform: translateY(100%); opacity: 0;}
+}
+@keyframes two-left-body_back{
+    from{transform: translateY(100%); opacity: 0;}
+    to{transform: translateY(0); opacity: 1;}
+}
+@keyframes bottom-title{
+    0%{transform: translateY(0); transform-origin: 50% 50%; text-shadow: none;}
+    100%{
+        transform: translateY(-35px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+@keyframes three-left01 {
+    0%{filter: blur(12px); opacity: 0;}
+    100%{filter: blur(0px); opacity: 1;}
+}
